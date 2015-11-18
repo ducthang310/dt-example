@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom Select Box</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <div class="wrap-bkg-color">
+        <p>Select with background color: </p>
+        <select class="sl-bkg-color">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="wrap-bkg-img">
+        <p>Select with background image: </p>
+        <select class="sl-bkg-img">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="wrap-remove-arrow">
+        <p>Select without arrow: </p>
+        <select class="sl-bkg-color sl-remove-arrow">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+        <select class="sl-bkg-img sl-remove-arrow">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+        </select>
+    </div>
+    <div class="wrap-wrap-select">
+        <p>Select with wrap-select: </p>
+        <div class="wrap-select">
+            <select class="sl-bkg-color sl-remove-arrow">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+        <div class="wrap-select">
+            <select class="sl-bkg-img sl-remove-arrow">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+    <div class="wrap-with-span">
+        <p>Select with span: </p>
+        <div class="wrap-select">
+            <span>Option 1</span>
+            <select class="sl-bkg-img sl-remove-arrow">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </div>
+    </div>
+
+<script type="text/javascript" src="jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $('.wrap-select select').change(function(){
+        $(this).prev().text($(this).find("option:selected").text());
+    });
+</script>
+</body>
+</html>
